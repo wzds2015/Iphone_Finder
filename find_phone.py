@@ -9,9 +9,6 @@ import cv2
 import glob
 import sys
 
-mean_file, std_file = 'results/mean_arr.bin', 'results/std_arr.bin'
-mean_arr, std_arr = np.fromfile(mean_file, dtype=float), np.fromfile(std_file, dtype=float)
-
 layer_norm = tf.contrib.layers.layer_norm
 
 def conv2d(x, W, b, strides = 1):
